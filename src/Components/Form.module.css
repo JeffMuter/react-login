@@ -1,0 +1,8 @@
+.formBox {
+    display: flex;
+    width: 25rem;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
