@@ -6,8 +6,32 @@ const Form = () => {
   const [password, setPassword] = useState("");
   const [passwordAgain, setPasswordAgain] = useState("");
 
+  let checkVis = false;
+
+  const showChecks = () => {
+    if (checkVis) {
+      return (
+        <PasswordChecklist
+          rules={["minLength", "specialChar", "number", "capital", "match"]}
+          minLength={5}
+          value={password}
+          valueAgain={passwordAgain}
+          onChange={(isValid) => {}}
+        ></PasswordChecklist>
+      );
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const clicked = () => {
+    checkVis = true;
+  };
+
   return (
-    <form className={classes.formBox}>
+    <form className={classes.formBox} onSubmit={handleSubmit} onClick={clicked}>
       <div>
         <label>Username:</label> <br />
         <input type="text"></input> <br />
@@ -24,13 +48,7 @@ const Form = () => {
         ></input>
         <br />
       </div>
-      <PasswordChecklist
-        rules={["minLength", "specialChar", "number", "capital", "match"]}
-        minLength={5}
-        value={password}
-        valueAgain={passwordAgain}
-        onChange={(isValid) => {}}
-      ></PasswordChecklist>
+      <div>{showChecks}</div>
       <div>
         <button type="submit">Create Account</button>
       </div>
