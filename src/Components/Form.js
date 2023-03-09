@@ -32,25 +32,26 @@ const Form = () => {
 
   return (
     <form className={classes.formBox} onSubmit={handleSubmit} onClick={clicked}>
-      <div>
-        <label>Username:</label> <br />
-        <input type="text"></input> <br />
-        <label>Password:</label> <br />
+      <div className={classes.inputBoxes}>
+        <input type="text" placeholder="Username"></input> <br />
         <input
           type="password"
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         ></input>{" "}
         <br />
-        <label>Confirm Password:</label> <br />
         <input
           type="password"
+          placeholder="Confirm Password"
           onChange={(e) => setPasswordAgain(e.target.value)}
         ></input>
         <br />
       </div>
       <div>{showChecks}</div>
       <div>
-        <button type="submit">Create Account</button>
+        <button className={classes.signUpButton} type="button">
+          Sign Up
+        </button>
       </div>
     </form>
   );

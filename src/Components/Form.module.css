@@ -1,8 +1,41 @@
+form * {
+    justify-content: space-around;
+}
+
 .formBox {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    height: 40vh;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     padding: 10px;
 }
+.inputBoxes * {
+    display: flex;
+    justify-content: space-around;
+}
 
+
+/* CSS */
+.signUpButton {
+    letter-spacing: 2px;
+    border: none;
+    width: 133px;
+    height: 47px;
+    margin-right: 19px;
+    border-radius: 23.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #bdd4f3;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
