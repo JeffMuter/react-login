@@ -32,6 +32,9 @@ const Form = () => {
 
   return (
     <form className={classes.formBox} onSubmit={handleSubmit} onClick={clicked}>
+      <div>
+        <h1 className={classes.formTitle}>Create Account</h1>
+      </div>
       <div className={classes.inputBoxes}>
         <input type="text" placeholder="Username"></input> <br />
         <input
@@ -48,6 +51,13 @@ const Form = () => {
         <br />
       </div>
       <div>{showChecks}</div>
+      <div>
+        <input type="checkbox" />
+        <label>
+          {" "}
+          I agree to the <a href="#">Terms & Conditions.</a>
+        </label>
+      </div>
       <div>
         <button className={classes.signUpButton} type="button">
           Sign Up
