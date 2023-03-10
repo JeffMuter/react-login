@@ -15,12 +15,14 @@ form * {
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     padding: 10px;
+    background-color: azure;
 }
 
 input {
     background: 0,0;
     border-width: 0;
     border-bottom: 1px  solid rgb(188, 188, 188);
+    outline: none;
 }
 
 .inputBoxes * {
@@ -28,6 +30,10 @@ input {
     justify-content: space-around;
 }
 
+.termsCheckbox {
+    font-size: small;
+    padding-bottom: 10px;
+}
 
 .signUpButton {
     letter-spacing: 2px;
@@ -47,3 +53,11 @@ input {
     color: #fff;
     text-transform: uppercase;
 }
+
+.signUpButton:hover {
+    background: #8dbaf5;
+}
+
+.signUpButton:active {
+    transform: scale(0.95);
+  }

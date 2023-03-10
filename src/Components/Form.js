@@ -33,7 +33,7 @@ const Form = () => {
   return (
     <form className={classes.formBox} onSubmit={handleSubmit} onClick={clicked}>
       <div>
-        <h1 className={classes.formTitle}>Create Account</h1>
+        <h2 className={classes.formTitle}>Create Account</h2>
       </div>
       <div className={classes.inputBoxes}>
         <input type="text" placeholder="Username"></input> <br />
@@ -51,7 +51,7 @@ const Form = () => {
         <br />
       </div>
       <div>{showChecks}</div>
-      <div>
+      <div className={classes.termsCheckbox}>
         <input type="checkbox" />
         <label>
           {" "}
