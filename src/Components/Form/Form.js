@@ -1,8 +1,11 @@
 import classes from "./Form.module.css";
-import PasswordChecklist from "react-password-checklist";
-import { useState } from "react";
+import TermsDoc from "../TermsDoc/TermsDoc.js";
 
-const Form = () => {
+const Form = (props) => {
+  const toTermDoc = () => {
+    window.location.href = "../TermsDoc/TermsDoc.js";
+  };
+
   return (
     <form className={classes.formBox}>
       <div>
@@ -16,8 +19,10 @@ const Form = () => {
       </div>
       <div className={classes.termsCheckbox}>
         <label className={classes.termsLabel}>
-          <input type="checkbox" />
-          <span></span>I agree to the <a href="#">Terms & Conditions.</a>
+          <input type="checkbox" />I agree to the{" "}
+          <a href="#" target="_blank" onClick={toTermDoc}>
+            Terms & Conditions
+          </a>
         </label>
       </div>
       <div>
